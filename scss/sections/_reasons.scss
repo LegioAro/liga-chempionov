@@ -1,0 +1,146 @@
+.reasons {
+  margin-bottom: 174px;
+  &__wrapper {
+  }
+
+  &__title-block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    margin-right: 20px;
+  }
+
+  &__btns {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  &__btn {
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    cursor: pointer;
+    width: 100%;
+    max-width: 60px;
+    margin-right: 40px;
+    transition: 0.3s;
+    display: flex;
+    flex-shrink: 0;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+  &__btn--prev {
+  }
+
+  &__btn--next {
+  }
+
+  &__items {
+  }
+
+  &__item {
+    border-radius: 15px;
+    background: linear-gradient(135deg, rgba(131, 118, 109, 0.2) 0%, rgba(63, 55, 50, 0.2) 100%);
+    padding: 40px;
+    height: 100%;
+  }
+
+  &__item-content {
+  }
+
+  &__item-title {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 125%;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    @include text-gradient;
+    position: relative;
+    padding-bottom: 14px;
+    margin-bottom: 20px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 65px;
+      height: 1px;
+      background: var(--gradient);
+    }
+  }
+
+  &__item-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 125%;
+    letter-spacing: 0.05em;
+    color: #e7e7e7;
+  }
+}
+
+@media (max-width: 1200px) {
+  .reasons {
+    &__item {
+      padding: 20px;
+    }
+    &__item-title {
+      letter-spacing: 0.3em;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .reasons {
+    &__item-title {
+      letter-spacing: 0.2em;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .reasons {
+    &__items {
+      margin-right: -20px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .reasons {
+    margin-bottom: 90px;
+    &__item-text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .reasons {
+    &__items {
+      margin-right: 0px;
+    }
+    &__title-block {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+    &__title {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    &__btns {
+      margin: 0 0 0 auto;
+    }
+  }
+}

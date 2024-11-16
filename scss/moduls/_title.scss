@@ -1,0 +1,29 @@
+.title {
+  font-family: var(--font-2);
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 100%;
+  text-transform: uppercase;
+
+  &--fz-60 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: 40px;
+    &--fz-60 {
+      font-size: 50px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 30px;
+    &--fz-60 {
+      font-size: 30px;
+    }
+  }
+}

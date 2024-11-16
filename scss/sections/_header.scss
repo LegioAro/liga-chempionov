@@ -1,0 +1,162 @@
+.header {
+  margin-top: 37px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__logo {
+    display: flex;
+    max-width: 250px;
+    width: 100%;
+    margin-right: 20px;
+  }
+
+  &__infos {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 20px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__info-icon {
+    display: flex;
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 20px;
+    margin-right: 15px;
+  }
+
+  &__info-content {
+    line-height: 125%;
+  }
+
+  &__info-title {
+    font-weight: 700;
+    font-size: 10px;
+    text-transform: uppercase;
+  }
+
+  &__info-text {
+    font-weight: 400;
+    font-size: 12px;
+  }
+
+  &__link {
+    position: relative;
+
+    text-transform: uppercase;
+    padding: 8px 18px 8px 60px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    background: #27a7e7;
+    border-radius: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    p {
+      font-weight: 700;
+      font-size: 10px;
+      line-height: 125%;
+    }
+  }
+
+  &__link-icon {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: 100%;
+    max-width: 48px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.25));
+  }
+}
+
+@media (max-width: 1100px) {
+  .header {
+    &__wrapper {
+      flex-wrap: wrap;
+    }
+    &__infos {
+      order: 3;
+      margin: 30px auto 0;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    margin-top: 20px;
+    &__logo {
+      max-width: 200px;
+    }
+    &__infos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 50px;
+      grid-row-gap: 20px;
+    }
+    &__info {
+      width: 100%;
+      max-width: 320px;
+      margin-right: 0;
+    }
+    &__info-content {
+      display: flex;
+    }
+    &__info-title {
+      margin-right: 10px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    &__info-content {
+      flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .header {
+    &__link {
+      padding: 0;
+      p {
+        display: none;
+      }
+    }
+    &__link-icon {
+      position: relative;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    &__infos {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &__info-content {
+      flex-direction: row;
+    }
+  }
+}

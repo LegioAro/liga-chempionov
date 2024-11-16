@@ -1,0 +1,26 @@
+.btn {
+  width: 100%;
+  border-radius: 100px;
+  padding: 26px 10px;
+  font-family: var(--font);
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 125%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 0;
+  box-shadow: 0 3px 39px 0 rgba(209, 44, 48, 0.5);
+  background-color: #bb3f41;
+
+  &--gradient {
+    color: #000;
+    box-shadow: 0 3px 39px 0 rgba(253, 236, 82, 0.5);
+    background: var(--gradient);
+  }
+}

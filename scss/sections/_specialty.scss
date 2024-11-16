@@ -1,0 +1,124 @@
+.specialty {
+  margin-bottom: 220px;
+  position: relative;
+
+  &__decor {
+    position: absolute;
+    width: 100%;
+    height: 926px;
+    left: 0;
+    top: 568px;
+    display: flex;
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 972px;
+    position: relative;
+  }
+
+  &__title {
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 125%;
+    letter-spacing: 0.05em;
+    color: #e7e7e7;
+    width: 100%;
+    max-width: 414px;
+    margin-bottom: 55px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 30px;
+    width: 100%;
+    max-width: 700px;
+    margin-left: auto;
+  }
+
+  &__item {
+    border-radius: 9px;
+    background: linear-gradient(135deg, rgba(131, 118, 109, 0.2) 0%, rgba(63, 55, 50, 0.2) 100%);
+    padding: 0 44px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-height: fit-content;
+
+    &:nth-child(even) {
+      margin-top: 110px;
+    }
+  }
+
+  &__item-img {
+    display: flex;
+    width: 100%;
+    max-width: 167px;
+    margin: -84px auto 12px;
+  }
+
+  &__item-title {
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+    text-transform: uppercase;
+  }
+
+  &__item-text {
+    font-size: 14px;
+    line-height: 125%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .specialty {
+    &__decor {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .specialty {
+    margin-bottom: 90px;
+
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__text {
+      margin-bottom: 80px;
+    }
+    &__items {
+      grid-column-gap: 20px;
+    }
+    &__item {
+      padding: 0 20px 30px;
+    }
+    &__item-text {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .specialty {
+    &__items {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 400px;
+      grid-row-gap: 110px;
+      margin: 0 auto;
+    }
+    &__item {
+      &:nth-child(even) {
+        margin-top: 0px;
+      }
+    }
+  }
+}
