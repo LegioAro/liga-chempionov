@@ -160,3 +160,11 @@
     }
   }
 }
+
+@media (max-width: 350px) {
+  .header {
+    &__logo {
+      max-width: 180px;
+    }
+  }
+}
