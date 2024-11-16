@@ -53,6 +53,7 @@
   &__item-header-content {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   &__item-header-num {
@@ -70,6 +71,7 @@
 
     font-size: 23px;
     line-height: 125%;
+    flex-wrap: wrap;
   }
 
   &__item-header-title {
