@@ -1,0 +1,29 @@
+.video {
+  --w: 800px;
+  width: 100%;
+  max-width: var(--w);
+  height: calc(var(--w) / 16 * 9);
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .video {
+    --w: 600px;
+  }
+}
+
+@media (max-width: 700px) {
+  .video {
+    --w: 400px;
+  }
+}
+@media (max-width: 450px) {
+  .video {
+    --w: 320px;
+  }
+}
+
+.fancybox__content {
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
