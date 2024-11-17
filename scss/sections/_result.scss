@@ -56,7 +56,7 @@
     max-width: 292px;
 
     li {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 125%;
       margin-bottom: 42px;
       position: relative;
@@ -81,7 +81,7 @@
   }
 
   &__text {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 125%;
     text-align: center;
     max-width: 566px;
@@ -109,6 +109,9 @@
     }
     &__items {
       max-width: 220px;
+      li {
+        margin-bottom: 20px;
+      }
     }
   }
 }

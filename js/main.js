@@ -26,7 +26,9 @@ new Splide('.feedback__slider--1', {
   },
 
   breakpoints: {
-    550: { perPage: 1 },
+    375: { perPage: 1, padding: { right: 0 } },
+    550: { perPage: 1, padding: { right: 100 } },
+    650: { perPage: 1, padding: { right: 200 } },
     900: { perPage: 2, padding: { right: 100 }, gap: 20 },
     1200: { perPage: 3 },
   },
@@ -45,7 +47,9 @@ new Splide('.feedback__slider--2', {
     speed: -1,
   },
   breakpoints: {
-    550: { perPage: 1 },
+    375: { perPage: 1, padding: { right: 0 } },
+    550: { perPage: 1, padding: { right: 100 } },
+    650: { perPage: 1, padding: { right: 200 } },
     900: { perPage: 2, padding: { right: 100 }, gap: 20 },
     1200: { perPage: 3 },
   },
@@ -91,7 +95,6 @@ for (let elem of scrollSmoothLinck) {
   });
 }
 
-
 //acordeon
 function acordeon(group, all = false, classActive = 'active', itemActive = false) {
   const acordeons = document.querySelectorAll(`[data-acordeon-group=${group}]`);
@@ -122,7 +125,6 @@ function acordeon(group, all = false, classActive = 'active', itemActive = false
 }
 
 acordeon('one', false, 'active', 1);
-
 
 //fancybox
 Fancybox.bind('[data-fancybox]', {

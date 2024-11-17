@@ -93,13 +93,13 @@
   }
 
   &__item-text {
-    font-size: 15px;
+    font-size: 18px;
     line-height: 125%;
     transition: 0.3s;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
   .steps {
     margin-bottom: 90px;
     &__wrapper {
@@ -116,10 +116,30 @@
     }
     &__item {
       padding: 10px 20px;
+      min-height: 150px;
+      &::after {
+        height: 138px;
+      }
     }
     &__item-num {
       margin-right: 20px;
       font-size: 40px;
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .steps {
+    &__items {
+      padding-left: 0;
+    }
+    &__item {
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
     }
   }
 }

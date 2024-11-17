@@ -51,7 +51,7 @@
     }
     p {
       font-style: italic;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 145%;
       letter-spacing: -0.05em;
     }
@@ -65,7 +65,7 @@
   &__suptitle {
     margin-top: 21px;
     margin-bottom: 19px;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 165%;
     letter-spacing: 0.2em;
     text-transform: uppercase;
@@ -76,7 +76,7 @@
   }
 
   &__list {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 165%;
     letter-spacing: -0.05em;
     list-style: disc;
@@ -131,7 +131,7 @@
       background-position: center;
     }
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 145%;
       letter-spacing: -0.05em;
     }
@@ -195,6 +195,17 @@
     &__info {
       p {
         font-size: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .who {
+    &__info {
+      padding: 20px;
+      &::before {
+        display: none;
       }
     }
   }
