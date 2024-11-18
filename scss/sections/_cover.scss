@@ -50,8 +50,24 @@
     margin: 14px 0 2px;
   }
 
+  &__timer {
+    margin: 50px auto;
+    position: relative;
+    isolation: isolate;
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 1px;
+      height: 1px;
+      box-shadow: 0 0 100px 120px rgba(0, 0, 0, 0.5);
+      z-index: -1;
+    }
+  }
+
   &__btns-wrapper {
-    margin-top: 102px;
   }
 
   &__btns-title {
@@ -130,9 +146,7 @@
     &__title {
       margin: 10px 0;
     }
-    &__btns-wrapper {
-      margin-top: 50px;
-    }
+
     &__btns {
       grid-template-columns: repeat(1, 1fr);
       max-width: 400px;

@@ -131,6 +131,9 @@ Fancybox.bind('[data-fancybox]', {
   // Your custom options
 });
 
+// вызываем функцию countdownTimer каждую секунду
+let timerId = setInterval(countdownTimer, 80);
+
 //Modal
 function isModal() {
   let modalBtns = document.querySelectorAll('.modal__btn-active');
@@ -145,6 +148,7 @@ function isModal() {
         if (modalWindow) {
           modalWindow.classList.add('active');
           body.classList.add('lock');
+          timerId = clearInterval(timerId);
         }
       });
     }
@@ -162,8 +166,76 @@ function isModalClose() {
 
         modalWindow.classList.remove('active');
         body.classList.remove('lock');
+        timerId = setInterval(countdownTimer, 80);
       });
     }
   }
 }
 isModalClose();
+
+//timer
+
+// let dateNow = new Date();
+let minutesDeadline = new Date(2024, 10, 19, 23);
+
+// dateNow.setMinutes(dateNow.getMinutes() + minutesDeadline);
+
+function countdownTimer() {
+  const diff = minutesDeadline - new Date();
+
+  if (diff <= 0) {
+    clearInterval(timerId);
+  }
+
+  let timers = document.querySelectorAll('.timer');
+  for (let timer of timers) {
+    // let timerDay = timer.querySelector('[data-timer-day]');
+    let timerHour = timer.querySelector('[data-timer-hour]');
+    let timerMinuts = timer.querySelector('[data-timer-minuts]');
+    let timerSeconds = timer.querySelector('[data-timer-seconds]');
+    let timerMilSeconds = timer.querySelector('[data-timer-milseconds]');
+
+    // let timerDayItems = timerDay.querySelectorAll('.timer__item-num');
+    let timerHourItems = timerHour.querySelectorAll('.timer__item-num');
+    let timerMinutesItems = timerMinuts.querySelectorAll('.timer__item-num');
+    let timerSecondsItems = timerSeconds.querySelectorAll('.timer__item-num');
+    let timerMilSecondsItems = timerMilSeconds.querySelectorAll('.timer__item-num');
+
+    // const days = diff > 0 ? Math.floor(diff / 1000 / 60 / 60 / 24) : 0;
+    const hours = diff > 0 ? Math.floor(diff / 1000 / 60 / 60) : 0;
+    const minutes = diff > 0 ? Math.floor(diff / 1000 / 60) % 60 : 0;
+    const seconds = diff > 0 ? Math.floor(diff / 1000) % 60 : 0;
+    const milSeconds = diff > 0 ? Math.floor(diff) % 100 : 0;
+
+    // let dayString = days < 10 ? '0' + days : String(days);
+    let hourString = hours < 10 ? '0' + hours : String(hours);
+    let minutesString = minutes < 10 ? '0' + minutes : String(minutes);
+    let secondsString = seconds < 10 ? '0' + seconds : String(seconds);
+    let milSecondsString = milSeconds < 10 ? '0' + milSeconds : String(milSeconds);
+
+    // let dayArr = dayString.split('');
+    let hourArr = hourString.split('');
+    let minutesArr = minutesString.split('');
+    let secondsArr = secondsString.split('');
+    let milSecondsArr = milSecondsString.split('');
+
+    // for (let i = 0; i < timerDayItems.length; i++) {
+    //   timerDayItems[i].innerHTML = dayArr[i];
+    // }
+    for (let i = 0; i < timerHourItems.length; i++) {
+      timerHourItems[i].innerHTML = hourArr[i];
+    }
+    for (let i = 0; i < timerMinutesItems.length; i++) {
+      timerMinutesItems[i].innerHTML = minutesArr[i];
+    }
+    for (let i = 0; i < timerSecondsItems.length; i++) {
+      timerSecondsItems[i].innerHTML = secondsArr[i];
+    }
+    for (let i = 0; i < timerMilSecondsItems.length; i++) {
+      timerMilSecondsItems[i].innerHTML = milSecondsArr[i];
+    }
+  }
+}
+
+// вызываем функцию countdownTimer
+countdownTimer();
