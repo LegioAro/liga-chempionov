@@ -51,7 +51,7 @@
   }
 
   &__timer {
-    margin: 50px auto;
+    margin-bottom: 20px;
     position: relative;
     isolation: isolate;
     &::before {
@@ -68,17 +68,21 @@
   }
 
   &__btns-wrapper {
+    position: relative;
+    z-index: 1;
   }
 
   &__btns-title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     font-weight: 500;
     font-size: 20px;
     line-height: 125%;
     letter-spacing: 0.5em;
     text-transform: uppercase;
-    text-align: center;
+    position: relative;
+    z-index: 1;
   }
 
   &__btns {
@@ -91,6 +95,8 @@
   }
 
   &__btn {
+    position: relative;
+    z-index: 1;
   }
 }
 

@@ -4,6 +4,7 @@ body {
   font-family: var(--font);
   font-weight: normal;
   position: relative;
+  overflow: hidden auto;
   &.lock {
     overflow: hidden;
   }
