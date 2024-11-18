@@ -86,17 +86,21 @@
   }
 
   &__btns {
+    width: 100%;
     max-width: 650px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 50px;
-    grid-row-gap: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__btn {
     position: relative;
     z-index: 1;
+    max-width: 300px;
+    &:not(:last-child) {
+      margin-right: 50px;
+    }
   }
 }
 
@@ -131,8 +135,19 @@
     &__btns-title {
       font-size: 16px;
     }
+    &__btns-wrapper {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
     &__btns {
-      grid-column-gap: 20px;
+      margin: 0 auto;
+    }
+    &__btn {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
     }
   }
 }
@@ -154,8 +169,14 @@
     }
 
     &__btns {
-      grid-template-columns: repeat(1, 1fr);
+      flex-direction: column;
       max-width: 400px;
+    }
+    &__btn {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
     }
   }
 }
