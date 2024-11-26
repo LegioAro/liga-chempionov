@@ -175,8 +175,15 @@ isModalClose();
 
 //timer
 
-// let dateNow = new Date();
-let minutesDeadline = new Date(2024, 10, 19, 23);
+let dateNow = new Date();
+let minutesDeadline = new Date(
+  dateNow.getFullYear(),
+  dateNow.getMonth(),
+  dateNow.getDate(),
+  23,
+  59,
+  59,
+);
 
 // dateNow.setMinutes(dateNow.getMinutes() + minutesDeadline);
 
